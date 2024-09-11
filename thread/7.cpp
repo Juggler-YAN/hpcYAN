@@ -9,10 +9,12 @@
 using namespace std;
 
 int main() {
-  auto f1 = async(
-      launch::async, [](const char *message) { cout << message << flush; },
-      "Hello, ");
-  cout << "World!" << endl;
-  f1.wait();
-  return 0;
+
+    auto f1 = async(
+        launch::async, [](const char *message) { cout << message << flush; },
+        "Hello, ");
+    cout << "World!" << endl;
+    f1.wait();
+    return 0;
+
 }
